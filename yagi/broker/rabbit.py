@@ -109,7 +109,7 @@ class Broker(object):
                         userid=config("user"),
                         password=config("password"),
                         virtual_host=config("vhost"),
-                        ssl=confbool("ssl"))
+                        ssl=confbool(config("ssl")))
 
         auto_delete = consumer.config("auto_delete") == "True" or False
         durable = consumer.config("durable") == "True" or False
